@@ -1,0 +1,17 @@
+                for (var i = 0;i<150;i++){
+                var linematerial = new THREE.LineBasicMaterial( { color: 0x3f2a14, linewidth:1} );
+                var test = new THREE.SphereGeometry(Math.random()*72,20,20);
+                color = new THREE.Color( 0xffffff );
+                color.setHex( Math.random() * 0xffffff );
+                var celer = color;
+                var testmat = new THREE.MeshLambertMaterial({color: celer, reflectivity: 9});
+                var mesh = new THREE.Mesh( test, testmat);
+                
+                var obj = [];
+                mesh.position.x = ( Math.random() - 0.5) * 6000 * Math.random();
+                mesh.position.y = ( Math.random() - 0.5) * 6000 * Math.random() ;
+                mesh.position.z = ( Math.random() - 0.5) * 6000 * Math.random() ;
+
+				scene.add(mesh);
+
+            }
